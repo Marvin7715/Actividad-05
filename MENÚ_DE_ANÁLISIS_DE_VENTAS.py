@@ -51,3 +51,29 @@ while True:
                 print(f"Promedio de ventas: {promedio:.2f}")
             else:
                 print("No hay ventas ingresadas.")
+        case "5":
+            contador = 0
+            for venta in ventas:
+                if venta > 1000:
+                    contador += 1
+            print(f"Días con ventas superiores a Q1000: {contador}")
+
+        case "6":
+            if ventas:
+                print("Clasificación de ventas:")
+                for venta in ventas:
+                    if venta > 1000:
+                        print(f"{venta}: Venta alta")
+                    elif 500 <= venta <= 1000:
+                        print(f"{venta}: Venta media")
+                    else:
+                        print(f"{venta}: Venta baja")
+            else:
+                print("No hay ventas ingresadas.")
+
+        case "7":
+            print("Saliendo del programa.")
+            break
+
+        case _:
+            print("Opción no válida. Por favor, seleccione una opción del 1 al 7.")
